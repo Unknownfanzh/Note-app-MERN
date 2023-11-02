@@ -16,7 +16,7 @@ function NotesList() {
   // Fetch notes when the component mounts
   const fetchNotes = async () => {
     try {
-      const response = await fetch("http://localhost:3000/notes", {
+      const response = await fetch("/api/notes", {
         method: "GET",
         credentials: "include",
       });
@@ -32,7 +32,7 @@ function NotesList() {
 
   const handleAddNote = async (title, description) => { // Accept title and description as parameters
     try {
-      const response = await fetch("http://localhost:3000/add-note", {
+      const response = await fetch("/api/add-note", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +51,7 @@ function NotesList() {
 
   const handleDeleteNote = async (noteId) => {
     try {
-      await fetch(`http://localhost:3000/notes/${noteId}`, {
+      await fetch(`/api/notes/${noteId}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -64,7 +64,7 @@ function NotesList() {
   const handleEditNote = async (id, title, description) => {
     if (id) {
       try {
-        await fetch(`http://localhost:3000/notes/${id}`, {
+        await fetch(`/api/notes/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

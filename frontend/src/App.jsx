@@ -10,7 +10,7 @@ function App() {
 
   const checkAuthenticated = async () => {
     try {
-      const response = await fetch("http://localhost:3000/auth", {
+      const response = await fetch("/api/auth", {
         method: "GET",
         credentials: "include", // This is required to include the session cookie with the request
       });
