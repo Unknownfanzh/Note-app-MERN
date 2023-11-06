@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
+import "./Login.css";
 
 export default function Login({ onLoginSuccess, setIsNewUser }) {
   const [loginInfo, setLoginInfo] = useState({ username: "", password: "" });
@@ -73,7 +75,10 @@ export default function Login({ onLoginSuccess, setIsNewUser }) {
                 </button>
               </div>
             </div>
-            <button type="submit" className="btn btn-primary btn-block mb-4 form-submit">
+            <button
+              type="submit"
+              className="btn btn-primary btn-block mb-4 form-submit"
+            >
               Sign in
             </button>
           </form>
@@ -82,3 +87,8 @@ export default function Login({ onLoginSuccess, setIsNewUser }) {
     </div>
   );
 }
+
+Login.propTypes = {
+  onLoginSuccess: PropTypes.func.isRequired,
+  setIsNewUser: PropTypes.func.isRequired,
+};

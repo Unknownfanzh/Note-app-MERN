@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useHistory } from "react";
 import {
   BrowserRouter as Router,
-  Route,
-  Link,
-  Routes,
-  useLocation,
+  // Route,
+  // Link,
+  // Routes,
+  // useLocation,
 } from "react-router-dom";
-import Header from "./Header/Header";
+import Header from "./layout/Header";
 import MainContent from "./MainContent";
-import Footer from "./Footer/Footer";
+import Footer from "./layout/Footer";
 // The main application component
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -53,9 +53,5 @@ function App() {
     </Router>
   );
 }
-
-// Login component
-
-// Signup component
 
 export default App;

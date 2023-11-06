@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Dashboard from "./components/Dashboard";
 import PleaseLogin from "./components/PleaseLogin";
+
 // The main application component
 function MainContent() {
   const [isNewUser, setIsNewUser] = useState(false);
@@ -65,30 +66,30 @@ function MainContent() {
         <div className="welcome-div">
           <h2 className="welcome">Welcome, {currentUser.username}</h2>
           <Link to="/dashboard">Go to Dashboard</Link>
-          <button
+
+          {/* <button
             type="button"
             className="btn btn-primary"
             onClick={handleLogout}
           >
             Logout
-          </button>
+          </button> */}
         </div>
       ) : null}
       <Routes>
         {isAuthenticated ? (
           <>
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route
-              path="/dashboard"
-              element={<Dashboard />}
+              path="/"
+              element={
+                <div className="welcome-div">Welcome to the home page!</div>
+              }
             />
-            <Route path="/" element={<div className="welcome-div">Welcome to the home page!</div>} />
           </>
         ) : (
           <>
-            <Route
-              path="/dashboard"
-              element={<PleaseLogin />}
-            />
+            <Route path="/dashboard" element={<PleaseLogin />} />
             {isNewUser ? (
               <Route
                 path="/"
@@ -116,9 +117,5 @@ function MainContent() {
     </>
   );
 }
-
-// Login component
-
-// Signup component
 
 export default MainContent;

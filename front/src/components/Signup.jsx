@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import "./Signup.css";
 
 export default function Signup({ onSignupSuccess, setIsNewUser }) {
-  const [signupInfo, setSignupInfo] = useState({ username: '', password: '' });
+  const [signupInfo, setSignupInfo] = useState({ username: "", password: "" });
 
   const handleInputChange = (e) => {
     setSignupInfo({ ...signupInfo, [e.target.name]: e.target.value });
@@ -10,23 +12,23 @@ export default function Signup({ onSignupSuccess, setIsNewUser }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/register', {
-        method: 'POST',
+      const response = await fetch("/api/register", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(signupInfo),
       });
 
       if (response.ok) {
-        alert('Signup successful, you can now login.');
+        alert("Signup successful, you can now login.");
         setIsNewUser(false);
-    } else {
+      } else {
         const message = await response.text();
         alert(message);
-    }
+      }
     } catch (error) {
-      console.error('Signup error:', error);
+      console.error("Signup error:", error);
     }
   };
 
@@ -72,13 +74,20 @@ export default function Signup({ onSignupSuccess, setIsNewUser }) {
                 </button>
               </div>
             </div>
-            <button type="submit" className="btn btn-primary btn-block mb-4 form-submit">
+            <button
+              type="submit"
+              className="btn btn-primary btn-block mb-4 form-submit"
+            >
               Sign up
             </button>
           </form>
         </div>
       </div>
     </div>
-    
   );
 }
+
+Signup.propTypes = {
+  onSignupSuccess: PropTypes.func.isRequired,
+  setIsNewUser: PropTypes.func.isRequired,
+};

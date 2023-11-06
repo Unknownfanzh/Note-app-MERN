@@ -1,2 +1,102 @@
-# Note-app-MERN
-This is a project
+# Notes App 📝
+
+The Notes App is a productivity tool designed to help users keep track of their to-do lists and daily tasks in an organized and efficient manner. This application aims to improve productivity by enabling users to create and manage their notes effectively.
+![3](https://github.com/Unknownfanzh/Note-app-MERN/assets/117818422/6414aeb6-9959-4721-8088-a8d42d4f0363)
+
+- Author: Fan Zhou & Tianjing(Jill) Liu
+- Design Doc:
+- Prensentation slides:
+- Video walkthrough:
+- Wireframe:
+- A project from course CS5610: https://johnguerra.co/classes/webDevelopment_fall_2023/
+- Deployed here:
+- Fan's Home page: https://unknownfanzh.github.io/Personal_homepage/
+- Tianjing's Home page: https://jjjing2023.github.io/
+
+## Features
+
+- **User Authentication**:
+  - Login and Logout
+  - Secure password hashing
+- **Note Management**:
+  - Create new Notes with title, description and auto-generated date
+  - Update existing notes
+  - Delete unwanted notes
+- **Interactive UI**:
+  - View all notes in a visually appealing format
+  - Edit and delete buttons for each individual note
+
+## Technologies Used
+
+### Frontend:
+
+- **React, Vite**: Core building blocks for the web application.
+- **Bootstrap**: Framework used for designing responsive and mobile-first UI.
+
+### Backend:
+
+- **Node.js**: JavaScript runtime used for server-side logic.
+- **Express**: Web application framework for building APIs in Node.js.
+- **MongoDB**: NoSQL database for storing user and post data.
+
+### Authentication:
+
+- **bcrypt**: Library for hashing and checking passwords, enhancing security.
+- **password.js**: A JavaScript library for handling and validating user passwords, including strength checking and hashing.
+
+### Other:
+
+- **Fetch API**: Used for making requests to the backend.
+- **Local Storage**: Utilized for storing user authentication tokens and other pertinent data client-side.
+
+## Getting Started 🚀
+
+### Prerequisites 📋
+
+Ensure you have Node.js installed on your machine.
+
+Ensure you have a Mongo server running on localhost: 27017, or configured in the `MONGO_URI` environment variable.
+
+### Installation
+
+1. Clone the repository:
+
+```
+
+```
+
+2. Navigate into the directory:
+
+```
+cd
+```
+
+3. Install the required dependencies:
+
+```
+npm install
+```
+
+4. Start the server:
+
+```
+npm start
+```
+
+this will start the backend server, running on http://localhost:3000
+
+## Deployment
+
+The website is hosted using heroku and can be accessed.
+
+## Configuration 🛠️
+
+Ensure you have a .env file in the root directory with the following content:
+
+```
+MONGODB_PASSWAOORD = <Your MONGODB password>
+```
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.

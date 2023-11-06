@@ -1,6 +1,6 @@
 // AddNote.jsx
 import { useState } from "react";
-
+import "./AddNote.css";
 function AddNote({ handleAddNote }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -14,15 +14,16 @@ function AddNote({ handleAddNote }) {
 
   const handleSaveClick = () => {
     if (title.trim().length > 0 && description.trim().length > 0) {
-        handleAddNote(title, description); // Pass title and description
-        setTitle(""); // Reset title
-        setDescription(""); // Reset description
-      }
+      handleAddNote(title, description); // Pass title and description
+      setTitle(""); // Reset title
+      setDescription(""); // Reset description
+    }
   };
 
   return (
     <div className="note new">
-      <input className="note-title-input"
+      <input
+        className="note-title-input"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Title"

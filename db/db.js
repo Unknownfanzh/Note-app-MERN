@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 dotenv.config();
-const MONGO_URI = `${process.env.MONGODB_URL}`;
+const MONGO_URI = `${process.env.MONGODB_URL}` || "mongodb://localhost:27017";
 const DB_NAME = "notes-app";
 
 let db;
