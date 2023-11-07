@@ -1,6 +1,7 @@
 // AddNote.jsx
 import { useState } from "react";
-import "./AddNote.css";
+import PropTypes from "prop-types";
+import "../css/AddNote.css";
 function AddNote({ handleAddNote }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -44,5 +45,9 @@ function AddNote({ handleAddNote }) {
     </div>
   );
 }
+
+AddNote.propTypes = {
+  handleAddNote: PropTypes.func.isRequired, // Specify that handleAddNote should be a function and is required
+};
 
 export default AddNote;

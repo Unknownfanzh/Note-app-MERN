@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useHistory } from "react";
 import {
   BrowserRouter as Router,
-  // Route,
-  // Link,
-  // Routes,
-  // useLocation,
+  Route,
+  Link,
+  Routes,
+  useLocation,
 } from "react-router-dom";
 import Header from "./layout/Header";
 import MainContent from "./MainContent";

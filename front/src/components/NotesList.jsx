@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import AddNote from "./AddNote";
 import Note from "./Note";
+import PropTypes from "prop-types";
 function NotesList() {
   const [notes, setNotes] = useState([]);
 
@@ -30,7 +31,8 @@ function NotesList() {
     fetchNotes();
   }, []);
 
-  const handleAddNote = async (title, description) => { // Accept title and description as parameters
+  const handleAddNote = async (title, description) => {
+    // Accept title and description as parameters
     try {
       const response = await fetch("/api/add-note", {
         method: "POST",
@@ -74,9 +76,7 @@ function NotesList() {
         });
         setNotes(
           notes.map((note) =>
-            note._id === id
-              ? { ...note, title, description }
-              : note
+            note._id === id ? { ...note, title, description } : note
           )
         );
       } catch (error) {
@@ -100,5 +100,10 @@ function NotesList() {
     </div>
   );
 }
+
+NotesList.propTypes = {
+  handleDeleteNote: PropTypes.func.isRequired,
+  handleEditNote: PropTypes.func.isRequired,
+};
 
 export default NotesList;

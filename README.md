@@ -4,10 +4,10 @@ The Notes App is a productivity tool designed to help users keep track of their 
 ![3](https://github.com/Unknownfanzh/Note-app-MERN/assets/117818422/6414aeb6-9959-4721-8088-a8d42d4f0363)
 
 - Author: Fan Zhou & Tianjing(Jill) Liu
-- Design Doc:
-- Prensentation slides:
+- Design Doc: https://docs.google.com/document/d/1EAsFKTKxo2EM_0I8KcAOXx2xk75Sw6-ow8CJ0O4uYco/edit?usp=sharing
+- Prensentation slides: https://docs.google.com/presentation/d/1F8g2TwDtAXDviRC96ALxGB-28JaY40gZ0ufvjpiZ9Lc/edit?usp=sharing
 - Video walkthrough:
-- Wireframe:
+- Wireframe: https://www.figma.com/file/47vn51YwOa816EISPfVTaj/project-3---notes-app?type=design&node-id=0%3A1&mode=design&t=f3t9pXtl6bT0n8Tj-1
 - A project from course CS5610: https://johnguerra.co/classes/webDevelopment_fall_2023/
 - Deployed here:
 - Fan's Home page: https://unknownfanzh.github.io/Personal_homepage/
@@ -62,7 +62,7 @@ Ensure you have a Mongo server running on localhost: 27017, or configured in the
 1. Clone the repository:
 
 ```
-
+git clone https://github.com/Unknownfanzh/Note-app-MERN.git
 ```
 
 2. Navigate into the directory:
@@ -87,7 +87,7 @@ this will start the backend server, running on http://localhost:3000
 
 ## Deployment
 
-The website is hosted using heroku and can be accessed.
+The website is hosted using heroku and can be accessed
 
 ## Configuration 🛠️
 

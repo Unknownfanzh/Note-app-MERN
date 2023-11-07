@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "./Signup.css";
+import "../css/Signup.css";
 
 export default function Signup({ onSignupSuccess, setIsNewUser }) {
   const [signupInfo, setSignupInfo] = useState({ username: "", password: "" });

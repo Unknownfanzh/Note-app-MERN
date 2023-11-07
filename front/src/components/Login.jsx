@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "./Login.css";
+import "../css/Login.css";
 
 export default function Login({ onLoginSuccess, setIsNewUser }) {
   const [loginInfo, setLoginInfo] = useState({ username: "", password: "" });

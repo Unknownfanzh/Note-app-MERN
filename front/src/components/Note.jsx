@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function Note({ note, handleDeleteNote, handleEditNote }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -34,7 +35,8 @@ export default function Note({ note, handleDeleteNote, handleEditNote }) {
     <div>
       {isEditing ? (
         <div className="note new">
-          <input className="note-title-input"
+          <input
+            className="note-title-input"
             value={editTitle}
             onChange={(e) => setEditTitle(e.target.value)}
             placeholder="Title"
@@ -54,7 +56,9 @@ export default function Note({ note, handleDeleteNote, handleEditNote }) {
       ) : (
         <div className="note">
           <span>
-            <p className="note-title"><strong>{note.title}</strong></p>
+            <p className="note-title">
+              <strong>{note.title}</strong>
+            </p>
             <p className="note-description">{note.description}</p>
           </span>
           <div className="note-footer">
@@ -69,3 +73,15 @@ export default function Note({ note, handleDeleteNote, handleEditNote }) {
     </div>
   );
 }
+
+// Define PropTypes for the props
+Note.propTypes = {
+  note: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+  }).isRequired,
+  handleDeleteNote: PropTypes.func.isRequired,
+  handleEditNote: PropTypes.func.isRequired,
+};

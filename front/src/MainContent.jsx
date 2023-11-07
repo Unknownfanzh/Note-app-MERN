@@ -67,13 +67,13 @@ function MainContent() {
           <h2 className="welcome">Welcome, {currentUser.username}</h2>
           <Link to="/dashboard">Go to Dashboard</Link>
 
-          {/* <button
+          <button
             type="button"
             className="btn btn-primary"
             onClick={handleLogout}
           >
             Logout
-          </button> */}
+          </button>
         </div>
       ) : null}
       <Routes>
