@@ -1,12 +1,14 @@
 {
-  "name": "travel-diary",
+  "name": "note-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "preinstall": "cd front && npm install && npm run build",
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "initDB": "mongoimport -d notes-app -c users --jsonArray db/initialUsers.json"
   },
   "keywords": [],
   "author": "Fan Zhou and Tianjing Liu",
