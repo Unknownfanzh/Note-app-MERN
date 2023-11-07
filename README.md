@@ -9,7 +9,7 @@ The Notes App is a productivity tool designed to help users keep track of their 
 - Video walkthrough:
 - Wireframe: https://www.figma.com/file/47vn51YwOa816EISPfVTaj/project-3---notes-app?type=design&node-id=0%3A1&mode=design&t=f3t9pXtl6bT0n8Tj-1
 - A project from course CS5610: https://johnguerra.co/classes/webDevelopment_fall_2023/
-- Deployed here:
+- Deployed here: https://note-app-fanandtianjing.onrender.com
 - Fan's Home page: https://unknownfanzh.github.io/Personal_homepage/
 - Tianjing's Home page: https://jjjing2023.github.io/
 
