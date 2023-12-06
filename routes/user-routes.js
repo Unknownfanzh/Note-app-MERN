@@ -1,3 +1,5 @@
+// I personally would suggest breaking this file into multiple ones.
+// Making it easier to read, debug, etc.
 import express from "express";
 import passport from "../passport/passport.js";
 import bcrypt from "bcryptjs";
