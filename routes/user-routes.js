@@ -1,3 +1,4 @@
+// Maybe need to put each different section in a separate file.
 import express from "express";
 import passport from "../passport/passport.js";
 import bcrypt from "bcryptjs";
